@@ -1,0 +1,25 @@
+{
+  "name": "red-contrib-google-cloud-logging",
+  "version": "1.0.0",
+  "description": "reads logs from google cloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "google",
+    "cloud",
+    "logging",
+    "log"
+  ],
+  "node-red": {
+    "nodes": {
+      "gcloud-logging-query": "src/query.js"
+    }
+  },
+  "author": "Oliver Lorenz <mail@oliverlorenz.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/logging": "^1.2.0"
+  }
+}

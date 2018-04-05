@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    RED.nodes.registerType('gcloud-logging-query', {
+      category: 'output',
+      color: '#8BBDD9',
+      defaults: {
+        name: { value: '' },
+        query: { value: '' },
+        pageSize: { value: '25', required: true },
+        orderBy: { value: 'timestamp desc', required: true },
+        secretClientPath: { value: '', required: true }
+      },
+      inputs:1,
+      outputs:1,
+      label: function() {
+          return this.name || "query";
+      },
+      paletteLabel: "logs"
+    });
+</script>
+
+<script type="text/x-red" data-template-name="gcloud-logging-query">
+    <div class="form-row">
+      <label for="node-input-name">Name</label>
+      <input id="node-input-name"></input>
+    </div>
+    <div class="form-row">
+      <label for="node-input-secretClientPath">Secret Client File</label>
+      <input type="text" id="node-input-secretClientPath"></input>
+    </div>
+    <div class="form-row">
+      <label for="node-input-query">Query</label>
+      <textarea type="text" id="node-input-query"></textarea>
+    </div>
+    <div class="form-row">
+      <label for="node-input-orderBy">Order By</label>
+      <input type="text" id="node-input-orderBy">
+    </div>
+
+    <div class="form-row">
+      <label for="node-input-pageSize">PageSize</label>
+      <input type="text" id="node-input-pageSize">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="gcloud-logging-query">
+    <p>A node to query from google cloud logs</p>
+</script>
