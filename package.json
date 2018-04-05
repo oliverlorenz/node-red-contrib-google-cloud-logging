@@ -1,5 +1,5 @@
 {
-  "name": "red-contrib-google-cloud-logging",
+  "name": "node-red-contrib-google-cloud-logging",
   "version": "1.0.0",
   "description": "reads logs from google cloud",
   "main": "index.js",
